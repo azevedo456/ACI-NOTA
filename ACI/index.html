@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Adicionar o CSS do Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <h1>Minha Loja Virtual</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Bem-vindo à nossa loja!</h2>
+            <p>Encontre os melhores produtos com preços incríveis.</p>
+        </div>
+    </section>
+
+    <!-- Produtos em Destaque -->
+    <section id="produtos" class="container">
+        <h2>Produtos em Destaque</h2>
+        <div class="produtos-list">
+            <!-- Produtos serão carregados aqui dinamicamente -->
+        </div>
+    </section>
+
+    <!-- Sobre a Loja -->
+    <section id="sobre" class="container">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma loja especializada em oferecer os melhores produtos com preços acessíveis. Nossa missão é proporcionar uma experiência de compra rápida, fácil e segura.</p>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao" class="container">
+        <h2>Localização da Loja</h2>
+        <p id="endereco">Endereço: R. Voluntários da Pátria, 651</p>
+
+        <!-- Contêiner do Mapa -->
+        <div id="map" style="height: 400px;"></div>
+        <p id="localizacao-usuario">Carregando sua localização...</p>
+    </section>
+
+    <!-- Formulário de Contato -->
+    <section id="contato" class="container">
+        <h2>Contato</h2>
+        <form action="enviar_contato.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Minha Loja Virtual. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Adicionar o script do Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
